@@ -1,0 +1,1458 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+    <title>Hotel creation Admin panel</title>
+</head>
+<body>
+    <div class="row" style="background-color: #F5F5F5;">
+        <div class="col-12">
+          <h4>Hotel creation <small></small></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-12">
+            <div class="card card-primary card-tabs">
+                <div class="card-header p-0 pt-1">
+                    <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link " id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Basic Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Facilities & Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-one-amenities-tab" data-toggle="pill" href="#custom-tabs-one-amenities" role="tab" aria-controls="custom-tabs-one-amenities" aria-selected="false">Amenities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-one-photos-tab" data-toggle="pill" href="#custom-tabs-one-photos" role="tab" aria-controls="custom-tabs-one-photos" aria-selected="false">Photos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-one-policies-tab" data-toggle="pill" href="#custom-tabs-one-policies" role="tab" aria-controls="custom-tabs-one-policies" aria-selected="false">Policies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-one-payments-tab" data-toggle="pill" href="#custom-tabs-one-payments" role="tab" aria-controls="custom-tabs-one-payments" aria-selected="false">Payments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-one-layout-and-pricing-tab" data-toggle="pill" href="#custom-tabs-one-layout-and-pricing" role="tab" aria-controls="custom-tabs-one-layout-and-pricing" aria-selected="false">layout-and-pricing</a>
+                        </li>
+                    </ul>
+                </div>
+            <div class="card-body">
+              <div class="tab-content" id="custom-tabs-one-tabContent">
+                <div class="tab-pane fade " id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                    <div class="row">
+                    <div class="card card-primary col-sm-6 col-lg-6 col-md-6 ">
+                        <div class="card-header">
+                          <h3 class="card-title">What's the name of your property?</h3>
+    
+                          <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                              <i class="fas fa-minus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div class="form-group">
+                            <label for="inputName">Property Name</label>
+                              <select id="inputStatus" class="form-control custom-select">
+                                  <option selected disabled>Select one</option>
+                                  <option>1 star</option>
+                                  <option>2 star</option>
+                                  <option>3 star</option>
+                              </select>
+                          </div>
+                            <div class="form-group">
+                                <label for="inputName">Property Names</label>
+                                <input type="text" id="inputName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEstimatedBudget">Estimated budget</label>
+                                <input type="number" id="inputEstimatedBudget" name="est_bd" class="form-control">
+                            </div>
+    
+                          <div class="form-group">
+                            <label for="inputStatus">Rating</label>
+                            <select id="inputStatus" class="form-control custom-select">
+                              <option selected disabled>Select one</option>
+                              <option>1 star</option>
+                              <option>2 star</option>
+                              <option>3 star</option>
+                            </select>
+                          </div>
+    
+                        </div>
+                        <!-- /.card-body -->
+                      </div>
+                      <div class="card card-primary col-sm-6 col-12 col-md-6">
+                        <div class="card-header">
+                          <h3 class="card-title">What are the contact details for this property?</h3>
+    
+                          <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                              <i class="fas fa-minus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div class="form-group">
+                            <label for="inputName">Contact Name</label>
+                            <input type="text" id="inputName" class="form-control">
+                          </div>
+    
+                          <div class="form-group">
+                            <label for="inputClientCompany">Contact Phone</label>
+                            <input type="text" id="inputClientCompany" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label for="inputProjectLeader">Alternative Phone</label>
+                            <input type="text" id="inputProjectLeader" class="form-control">
+                          </div>
+                        </div>
+                        <!-- /.card-body -->
+                      </div>
+                      <div class="card card-primary col-sm-6 col-12 col-md-6">
+                        <div class="card-header">
+                          <h3 class="card-title">Where's your property located?</h3>
+    
+                          <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                              <i class="fas fa-minus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div class="form-group">
+                            <label for="inputName">Street address</label>
+                            <input type="text" id="inputName" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label for="inputDescription">Address Line 2</label>
+                            <textarea id="inputDescription" class="form-control" rows="4"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputStatus">Country/Region</label>
+                            <select id="inputStatus" class="form-control custom-select">
+                              <option selected disabled>Select one</option>
+                              <option>Bangladesh</option>
+                              <option>India</option>
+                              <option>Qatar</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputClientCompany">City</label>
+                            <input type="text" id="inputClientCompany" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label for="inputProjectLeader">Zip code</label>
+                            <input type="text" id="inputProjectLeader" class="form-control">
+                          </div>
+                        </div>
+                        <!-- /.card-body -->
+                      </div>
+                </div>
+            </div>
+                <div class="tab-pane fade show active" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                    <div class="card card-primary col-sm-12 col-12 col-md-12">
+                        <div class="card-header">
+                            <h3 class="card-title">Facilities & Services</h3>
+    
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="">Tell us about your facilities,internet,parking and the language you speaks</p>
+    
+                            <div class="form-group">
+                                <label for="inputName">Parking</label>
+                                <p>This information for Car owner</p>
+                                <p>Is parking available to guests?</p>
+                                <select id="inputStatus" name="parking" class="form-control custom-select">
+                                    <option selected disabled>Select one</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputName">Breakfast</label>
+                                <p>Is breakfast available to guests?</p>
+                                <select id="inputStatus" name="breakfast" class="form-control custom-select">
+                                    <option selected disabled>Select one</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputName">Languages Spoken</label>
+                                <p>What languages do you or your staff speaks?</p>
+                                <select id="inputStatus" name="language" class="form-control custom-select">
+                                    <option selected disabled>Select one</option>
+                                    <option>English</option>
+                                    <option>Bangla</option>
+                                    <option>Hindi</option>
+                                    <option>Urdu</option>
+                                    <option>Arabic</option>
+                                    <option>Spanish</option>
+                                </select>
+                            </div>
+                            <div>
+                                <h3>Facilities That Are Popular With Guests</h3>
+                            </div>
+                            <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Free WiFi</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Restaurant</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Room Service</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Bar</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">24-hour front desk</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Sauna</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Fitness center</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Garden</label>
+                                    </div>
+                                </div>
+    
+    
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Non-smoking rooms</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Airport Shuttle</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Family Rooms</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Hot Tub-Jacuzzi</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Air Conditioning</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Water park</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                        <label for="customCheckbox1" class="custom-control-label">Swimming pool </label>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+    
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+    
+    
+    
+                <div class="tab-pane fade" id="custom-tabs-one-photos" role="tabpanel" aria-labelledby="custom-tabs-one-photos-tab">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-8 col-lg-8 col-sm-8">
+                            <h1>Property Photos</h1>
+                        </div>
+                        <div class="col-xs-12 col-md-8 col-lg-8 col-sm-8">
+                            <p>Great photos invite guests to get the full experience of your property, so upload some high-resolution photos that represent all your property has to offer. We will display these photos on your property's page on the Booking.com website.</p>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-md-9 col-sm-9 col-xs-12" style="background: ghostwhite; padding: 0px 22px; border-radius: 6px;">
+                            <fieldset>
+                                <legend>Photo Gallery</legend>
+                                <div class="row">
+                                    <div class="col-sm-12 mt-4" id="dropbox">
+                                        <h4 class="text-center">
+                                            Upload at least 1 photo
+                                        </h4>
+                                        <p class="text-center">
+                                            You will also be able to upload more photos after registration.
+                                        </p>
+                                        <h3 class="text-center">Drag and drop your photos here.</h3>
+                                        <p class="text-center" style="opacity: 0.7;">or</p>
+                                        <form action="" class="imgUploader text-center">
+                                            <input type="file" id="imgUpload" multiple accept="image/*" onchange="filesManager(this.files)">
+                                            <label class="button" for="imgUpload">Add Photos</label>
+                                        </form>
+                                        <div id="gallery"></div>
+                                    </div>
+                                </div>
+    
+                                <div class="row mt-4" style="background:antiquewhite; margin-bottom: 2rem; border-radius: 4px; padding: 20px 10px;">
+                                    <div class="col-sm-12 mt-2">
+                                        <h4>No professional photos? No problem.</h4>
+                                    </div>
+                                    <ol style="list-style: none; line-height: 36px;">
+                                        <li>
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            You Can Use
+    
+                                            <i class="fa fa-mobile" aria-hidden="true"></i>
+                                            A Smartphone
+    
+                                            <i class="fa fa-camera" aria-hidden="true"></i>
+                                            A digital camera
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            <span>Top tip! <a href="">Guests love photos! Here are some tips on taking great photos of your property</a> </span>
+                                        </li>
+    
+                                        <li>
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            <span>
+                                                If you don’t know who took a photo, it's best to avoid using it. Only use photos which you took or own the copyright to, or if it was taken by someone else, make sure you have the photographer’s consent to use the photo.
+                                            </span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </fieldset>
+                        </div>
+    
+                        <div class="col-md-3">
+                            <p style="background: aqua;
+                            padding: 16px 14px;
+                            border-radius: 4px;">
+                                After you complete registration you will still be able to make changes to your listing before it goes live.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-4">
+                        <div class="col-md-9">
+                            <form action="">
+                                    <input class="btn-lg btn btn-primary" type="submit" value="continue" style="width: 100%;">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    
+    
+    
+                <div class="tab-pane fade" id="custom-tabs-one-policies" role="tabpanel" aria-labelledby="custom-tabs-one-policies-tab">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                            <h1 class="">
+                                Policies
+                            </h1>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                            <p class="">
+                                Specify some basic policies. Do you allow children or pets? How flexible are you with cancellations?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <form action="">
+                                <fieldset>
+                                    <legend>Cancellations</legend>
+                                    <div class="row">
+                                        <div class="col-md-7 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="" style="margin-bottom: 8px;font-weight: 400;">How many days in advance can guests cancel free of charge?</label>
+                                                <select name="" id="" style="border: 1px solid #bdbdbd;height: 40px;box-shadow: none;border-radius: 2px;padding: 6px 12px;width: 100%;">
+                                                    <option value="0">Day of Arrival (18:00)</option>
+                                                    <option value="1">1 Days</option>
+                                                    <option value="2">2 Days</option>
+                                                    <option value="3">3 Days</option>
+                                                    <option value="7">7 Days</option>
+                                                    <option value="14">14 Days</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7 col-sm-12">
+                                            <label for="" style="margin-bottom: 8px;font-weight: 400;">or guests will pay 100%</label>
+                                            <div class="form-group">
+                                                <select name="" id="" style="border: 1px solid #bdbdbd;height: 40px;box-shadow: none;border-radius: 2px;padding: 6px 12px;width: 100%;">
+                                                    <option value="0">of the first night</option>
+                                                    <option value="1">of the full stay</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-xs-12">
+                                            <div class="alert alert-info">
+                                                <i class="fa fa-bell" style="float: left; margin-right: 5px; margin-top: 5px;"></i>
+                                                <p>The guest must cancel by 18:00 on the day of arrival or pay 100% of the price for the first night. </p>
+                                                <p> Please note: You'll be able to make changes to your policies later on. This is just to get you started.  </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+    
+                                <fieldset class="active">
+                                    <div class="row">
+                                        <div class="col-md-10 col-sm-9 col-xs-8">
+                                            <legend>Protect against accidental bookings</legend>
+                                        </div>
+                                        <div class="col-md-2 col-sm-3 col-xs-4">
+                                            <div class="grace_switch">
+                                                <label class="switch">
+                                                    <input type="checkbox" name="nr_grace_period_opt_in" value="1" id="grace_period_opt_in" class="grace_period_opt_in" data-gtm-form-interact-field-id="0">
+                                                    <span class="slider round"></span>
+                                                    <span class="switch-label" id="switch_label">No</span>
+                                                </label>
+                                                <input type="hidden" name="nr_grace_period" value="24" id="grace_period_24h" class="grace_period_24h" disabled="disabled">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12 grace-period-policy">
+                                            <p class="help-block">To save you time handling accidental bookings, we automatically waive cancellation fees for guests that cancel within the first 24 hours of a booking being made. You can change this period of time later in your property management platform.</p>
+                                        </div>
+                                    </div>
+                                </fieldset>
+    
+    
+                                <div class="row" id="reservation_section">
+                                    <div class="col-md-6" id="checkin" style="background: aqua;border-radius: 5px;">
+                                        <fieldset>
+                                            <legend>Check-in</legend>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="radio-block check-in-out-block" id="checkin_start_block">
+                                                        <label>from:</label>
+                                                        <div class="js-time-options-group time-options-group">
+                                                            <div class="d-flex">
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkin_start_preset" value="12:00" checked="" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block; border-radius: 4px;">12:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkin_start_preset" value="14:00" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block; border-radius: 4px;">14:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkin_start_preset" value="15:00" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block; border-radius: 4px;">15:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <select class="form-control " id="checkin_start" name="checkin_start">
+                                                                        <option disabled="disabled" value="" selected="">
+                                                                            Other</option>
+                                                                        <option value="07:00">
+                                                                            07:00
+                                                                        </option>
+                                                                        <option value="07:30">
+                                                                            07:30
+                                                                        </option>
+                                                                        <option value="08:00">
+                                                                            08:00
+                                                                        </option>
+                                                                        <option value="08:30">
+                                                                            08:30
+                                                                        </option>
+                                                                        <option value="09:00">
+                                                                            09:00
+                                                                        </option>
+                                                                        <option value="09:30">
+                                                                            09:30
+                                                                        </option>
+                                                                        <option value="10:00">
+                                                                            10:00
+                                                                        </option>
+                                                                        <option value="10:30">
+                                                                            10:30
+                                                                        </option>
+                                                                        <option value="11:00">
+                                                                            11:00
+                                                                        </option>
+                                                                        <option value="11:30">
+                                                                            11:30
+                                                                        </option>
+                                                                        <option value="12:00">
+                                                                            12:00
+                                                                        </option>
+                                                                        <option value="12:30">
+                                                                            12:30
+                                                                        </option>
+                                                                        <option value="13:00">
+                                                                            13:00
+                                                                        </option>
+                                                                        <option value="13:30">
+                                                                            13:30
+                                                                        </option>
+                                                                        <option value="14:00">
+                                                                            14:00
+                                                                        </option>
+                                                                        <option value="14:30">
+                                                                            14:30
+                                                                        </option>
+                                                                        <option value="15:00">
+                                                                            15:00
+                                                                        </option>
+                                                                        <option value="15:30">
+                                                                            15:30
+                                                                        </option>
+                                                                        <option value="16:00">
+                                                                            16:00
+                                                                        </option>
+                                                                        <option value="16:30">
+                                                                            16:30
+                                                                        </option>
+                                                                        <option value="17:00">
+                                                                            17:00
+                                                                        </option>
+                                                                        <option value="17:30">
+                                                                            17:30
+                                                                        </option>
+                                                                        <option value="18:00">
+                                                                            18:00
+                                                                        </option>
+                                                                        <option value="18:30">
+                                                                            18:30
+                                                                        </option>
+                                                                        <option value="19:00">
+                                                                            19:00
+                                                                        </option>
+                                                                        <option value="19:30">
+                                                                            19:30
+                                                                        </option>
+                                                                        <option value="20:00">
+                                                                            20:00
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="radio-block check-in-out-block" id="checkin_end_block">
+                                                        <label>to:</label>
+                                                        <div class="js-time-options-group time-options-group form-group">
+                                                            <div class="d-flex">
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkin_end_preset" value="12:00" checked="" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block; border-radius: 4px;">12:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkin_end_preset" value="22:00" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block; border-radius: 4px;">22:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkin_end_preset" value="00:00" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block; border-radius: 4px;">00:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <select class="form-control " id="checkin_end" name="checkin_end">
+                                                                        <option disabled="disabled" value="" selected="">
+                                                                            Other</option>
+                                                                        <option value="12:00">
+                                                                            12:00
+                                                                        </option>
+                                                                        <option value="12:30">
+                                                                            12:30
+                                                                        </option>
+                                                                        <option value="13:00">
+                                                                            13:00
+                                                                        </option>
+                                                                        <option value="13:30">
+                                                                            13:30
+                                                                        </option>
+                                                                        <option value="14:00">
+                                                                            14:00
+                                                                        </option>
+                                                                        <option value="14:30">
+                                                                            14:30
+                                                                        </option>
+                                                                        <option value="15:00">
+                                                                            15:00
+                                                                        </option>
+                                                                        <option value="15:30">
+                                                                            15:30
+                                                                        </option>
+                                                                        <option value="16:00">
+                                                                            16:00
+                                                                        </option>
+                                                                        <option value="16:30">
+                                                                            16:30
+                                                                        </option>
+                                                                        <option value="17:00">
+                                                                            17:00
+                                                                        </option>
+                                                                        <option value="17:30">
+                                                                            17:30
+                                                                        </option>
+                                                                        <option value="18:00">
+                                                                            18:00
+                                                                        </option>
+                                                                        <option value="18:30">
+                                                                            18:30
+                                                                        </option>
+                                                                        <option value="19:00">
+                                                                            19:00
+                                                                        </option>
+                                                                        <option value="19:30">
+                                                                            19:30
+                                                                        </option>
+                                                                        <option value="20:00">
+                                                                            20:00
+                                                                        </option>
+                                                                        <option value="20:30">
+                                                                            20:30
+                                                                        </option>
+                                                                        <option value="21:00">
+                                                                            21:00
+                                                                        </option>
+                                                                        <option value="21:30">
+                                                                            21:30
+                                                                        </option>
+                                                                        <option value="22:00">
+                                                                            22:00
+                                                                        </option>
+                                                                        <option value="22:30">
+                                                                            22:30
+                                                                        </option>
+                                                                        <option value="23:00">
+                                                                            23:00
+                                                                        </option>
+                                                                        <option value="23:30">
+                                                                            23:30
+                                                                        </option>
+                                                                        <option value="00:00">
+                                                                            00:00
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+    
+    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6" id="checkout" style="background: aqua;border-radius: 5px;">
+                                        <fieldset>
+                                            <legend>Check-out</legend>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="radio-block check-in-out-block" id="checkout_start_block">
+                                                        <label>from (optional):</label>
+                                                        <div class="js-time-options-group time-options-group">
+                                                            <div class="d-flex">
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkout_start_preset" value="00:00" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block; border-radius: 4px;">00:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkout_start_preset" value="10:00" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block; border-radius: 4px;">10:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkout_start_preset" value="12:00" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block; border-radius: 4px;">12:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <select class="form-control " id="checkout_start" name="checkout_start">
+                                                                        <option disabled="disabled" value="" selected="">
+                                                                            Other</option>
+                                                                        <option value="00:00">
+                                                                            00:00
+                                                                        </option>
+                                                                        <option value="00:30">
+                                                                            00:30
+                                                                        </option>
+                                                                        <option value="01:00">
+                                                                            01:00
+                                                                        </option>
+                                                                        <option value="01:30">
+                                                                            01:30
+                                                                        </option>
+                                                                        <option value="02:00">
+                                                                            02:00
+                                                                        </option>
+                                                                        <option value="02:30">
+                                                                            02:30
+                                                                        </option>
+                                                                        <option value="03:00">
+                                                                            03:00
+                                                                        </option>
+                                                                        <option value="03:30">
+                                                                            03:30
+                                                                        </option>
+                                                                        <option value="04:00">
+                                                                            04:00
+                                                                        </option>
+                                                                        <option value="04:30">
+                                                                            04:30
+                                                                        </option>
+                                                                        <option value="05:00">
+                                                                            05:00
+                                                                        </option>
+                                                                        <option value="05:30">
+                                                                            05:30
+                                                                        </option>
+                                                                        <option value="06:00">
+                                                                            06:00
+                                                                        </option>
+                                                                        <option value="06:30">
+                                                                            06:30
+                                                                        </option>
+                                                                        <option value="07:00">
+                                                                            07:00
+                                                                        </option>
+                                                                        <option value="07:30">
+                                                                            07:30
+                                                                        </option>
+                                                                        <option value="08:00">
+                                                                            08:00
+                                                                        </option>
+                                                                        <option value="08:30">
+                                                                            08:30
+                                                                        </option>
+                                                                        <option value="09:00">
+                                                                            09:00
+                                                                        </option>
+                                                                        <option value="09:30">
+                                                                            09:30
+                                                                        </option>
+                                                                        <option value="10:00">
+                                                                            10:00
+                                                                        </option>
+                                                                        <option value="10:30">
+                                                                            10:30
+                                                                        </option>
+                                                                        <option value="11:00">
+                                                                            11:00
+                                                                        </option>
+                                                                        <option value="11:30">
+                                                                            11:30
+                                                                        </option>
+                                                                        <option value="12:00">
+                                                                            12:00
+                                                                        </option>
+                                                                        <option value="12:30">
+                                                                            12:30
+                                                                        </option>
+                                                                        <option value="13:00">
+                                                                            13:00
+                                                                        </option>
+                                                                        <option value="13:30">
+                                                                            13:30
+                                                                        </option>
+                                                                        <option value="14:00">
+                                                                            14:00
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="radio-block check-in-out-block" id="checkout_end_block">
+                                                        <label>to:</label>
+                                                        <div class="js-time-options-group time-options-group form-group">
+                                                           <div class="d-flex">
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkout_end_preset" value="10:00" checked="" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block;border-radius: 4px;">10:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkout_end_preset" value="11:00" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block; border-radius: 4px;">11:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" name="checkout_end_preset" value="12:00" style="display: none;">
+                                                                        <span style="text-align: center;padding: 7px 7px;min-width: 70px;height: 40px;line-height: 1.7;border: 1px solid #bdbdbd;background: transparent;box-shadow: none;display: block; border-radius: 4px;">12:00</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <select class="form-control " id="checkout_end" name="checkout_end">
+                                                                        <option disabled="disabled" value="" selected="">
+                                                                            Other</option>
+                                                                        <option value="07:00">
+                                                                            07:00
+                                                                        </option>
+                                                                        <option value="07:30">
+                                                                            07:30
+                                                                        </option>
+                                                                        <option value="08:00">
+                                                                            08:00
+                                                                        </option>
+                                                                        <option value="08:30">
+                                                                            08:30
+                                                                        </option>
+                                                                        <option value="09:00">
+                                                                            09:00
+                                                                        </option>
+                                                                        <option value="09:30">
+                                                                            09:30
+                                                                        </option>
+                                                                        <option value="10:00">
+                                                                            10:00
+                                                                        </option>
+                                                                        <option value="10:30">
+                                                                            10:30
+                                                                        </option>
+                                                                        <option value="11:00">
+                                                                            11:00
+                                                                        </option>
+                                                                        <option value="11:30">
+                                                                            11:30
+                                                                        </option>
+                                                                        <option value="12:00">
+                                                                            12:00
+                                                                        </option>
+                                                                        <option value="12:30">
+                                                                            12:30
+                                                                        </option>
+                                                                        <option value="13:00">
+                                                                            13:00
+                                                                        </option>
+                                                                        <option value="13:30">
+                                                                            13:30
+                                                                        </option>
+                                                                        <option value="14:00">
+                                                                            14:00
+                                                                        </option>
+                                                                        <option value="14:30">
+                                                                            14:30
+                                                                        </option>
+                                                                        <option value="15:00">
+                                                                            15:00
+                                                                        </option>
+                                                                        <option value="15:30">
+                                                                            15:30
+                                                                        </option>
+                                                                        <option value="16:00">
+                                                                            16:00
+                                                                        </option>
+                                                                        <option value="16:30">
+                                                                            16:30
+                                                                        </option>
+                                                                        <option value="17:00">
+                                                                            17:00
+                                                                        </option>
+                                                                        <option value="17:30">
+                                                                            17:30
+                                                                        </option>
+                                                                        <option value="18:00">
+                                                                            18:00
+                                                                        </option>
+                                                                        <option value="18:30">
+                                                                            18:30
+                                                                        </option>
+                                                                        <option value="19:00">
+                                                                            19:00
+                                                                        </option>
+                                                                        <option value="19:30">
+                                                                            19:30
+                                                                        </option>
+                                                                        <option value="20:00">
+                                                                            20:00
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                           </div>
+    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+    
+    
+                                <fieldset id="children_section mt-4">
+                                    <legend class="font-size: 20px;line-height: 28px;font-weight: 400;">Children</legend>
+                                        <div class="row">
+                                            <div class="form-group">
+                                                {{-- <legend>Guest payment options</legend> --}}
+                                                <p for="">Can you accommodate children? (You can specify the ages and prices later)</p>
+                                                <div class="form-check form-check-inline" style="border: 1px solid #DEDEDE;padding: 5px 32px;border-radius: 4px;">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="position: absolute;top: 30%;left: 8px;margin: 0;float: none;">
+                                                    <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline" style="border: 1px solid #DEDEDE;padding: 5px 32px;border-radius: 4px;">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" style="position: absolute;top: 30%;left: 8px;margin: 0;float: none;">
+                                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </fieldset>
+    
+    
+    
+                                <fieldset>
+                                    <legend>Pets</legend>
+                                    <div class="row">
+                                        <div class="describe-block">
+                                            <p class="describe-text" style="margin-bottom: 8px;padding: 5px 8px;background: antiquewhite;border-radius: 2px;">
+                                                Some guests like to travel with their furry friends. Indicate if you allow pets and if any charges apply.
+                                            </p>
+                                        </div>
+                                    </div>
+    
+                                    <div>
+                                        <div class="form-group row">
+                                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                                <label class="" for="pets_allowed">Do you allow pets?</label>
+                                                    <select id="pets_allowed" name="pets_allowed" class="form-control " style="" data-gtm-form-interact-field-id="0">
+                                                        <option value="no">No</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="request">Upon request</option>
+                                                    </select>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 pet_cost_question">
+                                                {{-- style="display: none!important;visibility: hidden!important;" --}}
+                                                <label class="" for="pets_fee">Are there additional charges for pets?</label>
+                                                    <select id="pets_fee" name="pets_fee" class="form-control " style="">
+                                                        <option value="free">Pets can stay for free</option>
+                                                        <option value="paid">Charges may apply</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+    
+                                <input type="submit" name="proceed" value="Continue" class="btn btn-block btn-primary btn-lg save_and_proceed">
+    
+    
+                            </form>
+                        </div>
+                        <div class="col-md-3">
+                            <p style="background: aqua;padding: 10px 14px;border-radius: 4px;">After you complete registration you will still be able to make changes to your listing before it goes live.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="custom-tabs-one-amenities" role="tabpanel" aria-labelledby="custom-tabs-one-amenities-tab">
+                    <div class="row" style="flex-direction: column;">
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                <h1 class=" alignment_header_main" style="font-size: 24px; line-height: 32px; font-weight: 700;">
+                                    Amenities
+                                </h1>
+                            </div>
+    
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="page_description">
+                                    <p>You are nearly done! We just need a few more details about the extra bed options you provide, plus any amenities or specific features and services available.</p>
+                                </div>
+                            </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-md-9 main-content">
+                            <div class="core-content">
+                                <form action="">
+                                    <fieldset id="extra_beds_options" class="active">
+                                        <legend>
+                                            Extra bed options
+                                        </legend>
+                                        <div class="row">
+                                            <div class="form-group col-md-12">
+                                                <div class="row">
+                                                    <div class="describe-block">
+                                                        <p class="describe-text">
+                                                            These are the bed options that can be added upon request.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <p for="">Can you provide extra beds?</p>
+                                                <div class="form-check form-check-inline" style="border: 1px solid #DEDEDE;padding: 5px 32px;border-radius: 4px;">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="position: absolute;top: 30%;left: 8px;margin: 0;float: none;">
+                                                    <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline" style="border: 1px solid #DEDEDE;padding: 5px 32px;border-radius: 4px;">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" style="position: absolute;top: 30%;left: 8px;margin: 0;float: none;">
+                                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+    
+                                    <fieldset>
+                                        <legend class="mb-2">Amenities</legend>
+                                        <div class="mb-4">Tell us about your amenities</div>
+                                        <div>
+                                            <div style="border: 1px solid #e6e6e6; padding: 8px;">
+                                                <h3>Most requested by guests</h3>
+                                                <div>
+                                                    <ul style="list-style :none;">
+                                                        <li>
+                                                            <div>
+                                                                <label for="">
+                                                                    <input type="checkbox">
+                                                                    Air conditioning
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <label for="">
+                                                                    <input type="checkbox">
+                                                                    Spa Bath
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <label for="">
+                                                                    <input type="checkbox">
+                                                                    Flat-screen TV
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <label for="">
+                                                                    <input type="checkbox">
+                                                                    Electric Kettle
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <label for="">
+                                                                    <input type="checkbox">
+                                                                    Balcony
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <label for="">
+                                                                    <input type="checkbox">
+                                                                    View
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <label for="">
+                                                                    <input type="checkbox">
+                                                                    Terrace
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <button style="padding: 4px 8px;margin: 10px 0 10px 0 !important; background-color: #f5f5f5;border: 1px solid #333; border-radius:2px;">
+                                                <div>Show all aminities</div>
+                                            </button>
+                                        </div>
+                                    </fieldset>
+                                    <div>
+                                        <input type="submit" class="btn btn-primary btn-lg" value="continue" style="width: 100%;">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                            <p>After you complete registration you will still be able to make changes to your listing before it goes live.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="tab-pane fade" id="custom-tabs-one-payments" role="tabpanel" aria-labelledby="custom-tabs-one-payments-tab" style="margin: 10px;">
+                    <h2>Payments</h2>
+                    <p>Specify the types of payment you accept, tax details and other options like additional charges.</p>
+                    <div class="row" style="height: 12rem;width: 100%;">
+                        <div class="col-md-9 col-sm-9 col-xm-12">
+                            <div class="col-xm-12" style = "background: whitesmoke;padding: 10px 10px;border-radius: 7px;">
+                                <div class="form-group">
+                                    <legend>Guest payment options</legend>
+                                    <p for="">Can you charge credit cards at the property?</p>
+                                    <div class="form-check form-check-inline" style="border: 1px solid #DEDEDE;padding: 5px 32px;border-radius: 4px;">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="position: absolute;top: 30%;left: 8px;margin: 0;float: none;">
+                                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline" style="border: 1px solid #DEDEDE;padding: 5px 32px;border-radius: 4px;">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" style="position: absolute;top: 30%;left: 8px;margin: 0;float: none;">
+                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                    </div>
+                                </div>
+                                <p> We will inform guests that you only accept cash.</p>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3 col-sm-3 col-xm-12" style="background: whitesmoke;border-radius: 7px;padding: 18px 10px;">
+                            <p class="">How do guests book and how do they pay?
+                                To initially secure a reservation we allow guests to use all major credit cards. However, when it comes to collecting payment, you can specify the payment methods you accept at your property.</p>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-4">
+                        <div class="col-md-9 col-sm-9 col-xm-12" style="    background: whitesmoke;border-radius: 7px;padding: 8px 14px;">
+                            <legend>Commission payments</legend>
+                            <div class="row">
+                                <div class="col-sm-6 col-md-8">
+                                    <p>
+                                        At the beginning of each month we will send you an invoice for all complete bookings in the previous month.
+                                    </p>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="commission-number-section">
+                                        <h4>Commission percentage:</h4>
+                                        <span class="commission-number" style="position: absolute;right: 54px;font-size: 24px;opacity: 0.5;">12%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="form-group col-sm-4 col-xs-12">
+                                    <label style="font-weight: 400;" for="">What name should be placed on the invoice (e.g. legal/company name)?</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">value one</option>
+                                        <option value="">value two</option>
+                                        <option value="">value three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="form-group col-sm-4 col-xs-12">
+                                    <label style="font-weight: 400;" for="">Does this recipient have the same address as your property?</label>
+                                    <div class="form-check form-check-inline" style="border: 1px solid #DEDEDE;padding: 5px 32px;border-radius: 4px;">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="position: absolute;top: 30%;left: 8px;margin: 0;float: none;">
+                                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline" style="border: 1px solid #DEDEDE;padding: 5px 32px;border-radius: 4px;">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" style="position: absolute;top: 30%;left: 8px;margin: 0;float: none;">
+                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <h4>How your commission works for you!</h4>
+                                <ul style="list-style: none;line-height: 170%;padding-left: 2px;">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        No hidden fees – one flat commission rate
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        Pay only for bookings that stay
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        24/7 personal support by phone or e-mail
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        Strong search engine presence for more bookings
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        Property advice and analytics to increase performance
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        Instant confirmations to save you time
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-2">
+                        <div class="col-md-9" style="background: whitesmoke;padding: 14px 10px;border-radius: 7px;">
+                            <fieldset class="mt-4">
+                                <h4>Your availability to guests</h4>
+                                <legend class="mt-4">You’re almost done – just a few final things to consider</legend>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        To help you start earning, we automatically make your property open for bookings for the next 18 months. If you would like to make changes to your availability before opening, you can choose ‘complete registration and open later’. Your availability can also be adjusted after you open for bookings.
+                                    </div>
+                                </div>
+                                <legend class="mt-4">To complete your registration, please tick the boxes below:</legend>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group checkbox">
+                                            <label for="" class="mt-2">
+                                                <input type="checkbox">
+                                                <span>
+                                                    I certify that this is a legitimate accommodation business with all necessary licenses and permits, which can be shown upon first request. Booking.com B.V. reserves the right to verify and investigate any details provided in this registration.
+                                                </span>
+                                            </label>
+                                            <label for="" class="mt-2">
+                                                <input type="checkbox">
+                                                <span>I have read, accepted and agreed to the General Delivery Terms and Privacy Statement.</span>
+                                            </label>
+                                            <div>
+                                                Booking.com enables accommodations and guests to communicate through Booking.com, which receives and processes communications in accordance with the Booking.com Privacy Statement and General Delivery Terms.
+                                            </div>
+                                            <p>
+                                                I certify that the Third Party Company can represent and warrant the sole and exclusive right to market, promote, distribute and make the Accommodations available by itself or its distribution partners and that the Third Party Company can be responsible for on-site property management services such as key-handling, on-site customer service or cleaning.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                            <div class="col-md-9">
+                                <input type="submit" name="" id="" class="btn btn-primary mt-2" value="Complete registration and open for booking" style="padding: calc(24px/2) 24px;font-size: 16px;line-height: 24px;font-weight: 400;width: 100%;">
+                                <div class="row d-flex justify-content-center">
+                                    <input type="submit" name="" id="" class="btn btn-link mt-3" value="Complete registration and open later">
+                                </div>
+                                <p class="text-center mt-4">Almost done! You can always change the information even after you completed the registration!</p>
+                            </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade" id="custom-tabs-one-layout-and-pricing" role="tabpanel" aria-labelledby="custom-tabs-one-layout-and-pricing-tab" style="margin: 10px;">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-8 col-sm-8 col-xs-12">
+                            <h2>Layout and Pricing</h2>
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-8 col-xs-12">
+                            <p>Tell us about your first room. Once you've entered all the necessary information, you'll be able to fill in the details of your other rooms.</p>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                                <div class="col-md-9">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: bold; padding: 32px; font-size: 1.2rem;">Sajib</td>
+                                                <td style="padding: 32px; font-size: 1.2rem;">
+                                                    Number Of This Type
+                                                    <b>1</b>
+                                                </td>
+                                                <td style="padding: 32px; font-size: 1.2rem;">
+                                                    <div>
+                                                        <a href="" style="margin-right: 16px;">Edit</a>
+                                                        <a href="">Delete</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+    
+                                <div class="col-md-3">
+                                    <p>After you complete registration you will still be able to make changes to your listing before it goes live.</p>
+                                </div>
+    
+                                <div class="col-md-9 mt-4">
+                                    <div style="text-align: right;">
+                                        <a href="btn btn-default btn-lg" style="border: 1px solid black; padding: 12px 26px;">Add another room</a>
+                                        <a href="btn btn-primary btn-lg" style="padding: 14px 50px; text-decoration: none; background: #3276B1; color: whitesmoke; border-radius: 3px;">Continue</a>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+    
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+        <script>
+            let dropBox = document.getElementById('dropBox');
+    
+            // modify all of the event types needed for the script so that the browser
+            // doesn't open the image in the browser tab (default behavior)
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(evt => {
+                dropBox.addEventListener(evt, prevDefault, false);
+            });
+            function prevDefault (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+    
+            // remove and add the hover class, depending on whether something is being
+            // actively dragged over the box area
+            ['dragenter', 'dragover'].forEach(evt => {
+                dropBox.addEventListener(evt, hover, false);
+            });
+            ['dragleave', 'drop'].forEach(evt => {
+                dropBox.addEventListener(evt, unhover, false);
+            });
+            function hover(e) {
+                dropBox.classList.add('hover');
+            }
+            function unhover(e) {
+                dropBox.classList.remove('hover');
+            }
+    
+            // the DataTransfer object holds the data being dragged. it's accessible
+            // from the dataTransfer property of drag events. the files property has
+            // a list of all the files being dragged. put it into the filesManager function
+            dropBox.addEventListener('drop', mngDrop, false);
+            function mngDrop(e) {
+                let dataTrans = e.dataTransfer;
+                let files = dataTrans.files;
+                filesManager(files);
+            }
+    
+            // use FormData browser API to create a set of key/value pairs representing
+            // form fields and their values, to send using XMLHttpRequest.send() method.
+            // Uses the same format a form would use with multipart/form-data encoding
+            function upFile(file) {
+                //only allow images to be dropped
+                let imageType = /image.*/;
+                if (file.type.match(imageType)) {
+                    let url = 'HTTP/HTTPS URL TO SEND THE DATA TO';
+                    // create a FormData object
+                    let formData = new FormData();
+                    // add a new value to an existing key inside a FormData object or add the
+                    // key if it doesn't exist. the filesManager function will loop through
+                    // each file and send it here to be added
+                    formData.append('file', file);
+    
+                    // standard file upload fetch setup
+                    fetch(url, {
+                        method: 'put',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(result => { console.log('Success:', result); })
+                    .catch(error => { console.error('Error:', error); });
+                } else {
+                    console.error("Only images are allowed!", file);
+                }
+            }
+    
+    
+            // use the FileReader API to get the image data, create an img element, and add
+            // it to the gallery div. The API is asynchronous so onloadend is used to get the
+            // result of the API function
+            function previewFile(file) {
+                // only allow images to be dropped
+                let imageType = /image.*/;
+                if (file.type.match(imageType)) {
+                    let fReader = new FileReader();
+                    let gallery = document.getElementById('gallery');
+                    // reads the contents of the specified Blob. the result attribute of this
+                    // with hold a data: URL representing the file's data
+                    fReader.readAsDataURL(file);
+                    // handler for the loadend event, triggered when the reading operation is
+                    // completed (whether success or failure)
+                    fReader.onloadend = function() {
+                        let wrap = document.createElement('div');
+                        let img = document.createElement('img');
+                        // set the img src attribute to the file's contents (from read operation)
+                        img.src = fReader.result;
+                        let imgCapt = document.createElement('p');
+                        // the name prop of the file contains the file name, and the size prop
+                        // the file size. convert bytes to KB for the file size
+                        let fSize = (file.size / 1000) + ' KB';
+                        imgCapt.innerHTML = `<span class="fName">${file.name}</span><span class="fSize">${fSize}</span><span class="fType">${file.type}</span>`;
+                        gallery.appendChild(wrap).appendChild(img);
+                        gallery.appendChild(wrap).appendChild(imgCapt);
+                    }
+                } else {
+                    console.error("Only images are allowed!", file);
+                }
+            }
+    
+            function filesManager(files) {
+                // spread the files array from the DataTransfer.files property into a new
+                // files array here
+                files = [...files];
+                // send each element in the array to both the upFile and previewFile
+                // functions
+                files.forEach(upFile);
+                files.forEach(previewFile);
+            }
+        </script>
+</body>
+</html>
+
+
+  <!-- ./row -->
